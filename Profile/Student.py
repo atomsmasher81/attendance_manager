@@ -15,6 +15,9 @@ class Student(object):
 
 
 	def get_info(self):
+		"""
+		        this function provides the information of the  specific student
+		"""
 		print(self.uni_num)
 		print(self.name)
 		print(self.section)
@@ -25,6 +28,9 @@ class Student(object):
 li = {}
 
 def stu_args(x):
+	""""
+	    this function provides the arguments taken by student one by one
+	"""
 	return {
 		1 : "num",
 		2 : "name",
@@ -35,6 +41,10 @@ def stu_args(x):
 
 
 def stu_input():
+	"""
+	this  function  is used to input data of student
+	:return: list of  keys(agruments) mapped to their respective value
+	"""
     for i in range(1, 6):
         tmp = input("enter the  parameter " + stu_args(i))
         key = stu_args(i)
