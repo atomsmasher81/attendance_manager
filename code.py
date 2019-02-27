@@ -2,8 +2,6 @@ import Profile.Student as Student
 import Profile.Teacher as Teacher
 
 
-
-
 print("do you want to enter record : y/n")
 var = input().lower()
 if var== 'y':
@@ -26,9 +24,6 @@ if var== 'y':
 
 
 
-print("upto here")
-s1 = Student.Student(1,"kartik","a","IT",2016)
-s1.get_info()
 
 #example for attendance %
 attended_days = 50
@@ -41,3 +36,4 @@ def attendance_calculator(attended,total):
 
 attendance_percentage= attendance_calculator(attended_days,total_days)
 print(attendance_percentage)
+
