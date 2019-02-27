@@ -10,9 +10,10 @@ class Teacher(object):
         self.special_designation = special_designation
 
 
-
-
     def get_info(self):
+        """
+        this function provides the information of the  specific teacher
+        """
         print(self.teach_num)
         print(self.name)
         print(self.branch)
@@ -22,6 +23,10 @@ class Teacher(object):
 li = {}
 
 def teach_args(x):
+
+    """"
+    this function provides the arguments taken by teacher  one by one
+    """
 	 return {
 		1 : "teach_num",
 		2 : "name",
@@ -30,6 +35,11 @@ def teach_args(x):
 	    }[x]
 
 def teach_input():
+
+    """
+    this  function  is used to input data of teacher
+    :return: list of  keys(agruments) mapped to their respective value
+    """
     for i in range(1, 4):
         tmp = input("enter the  parameter " + teach_args(i))
         key = teach_args(i)

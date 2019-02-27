@@ -17,6 +17,13 @@ for x in mycursor:
 	print(x)
 
 mycursor.execute("USE ATTENDANCE")
+
+mycursor.execute("SELECT * FROM attendance ORDER BY SERIAL DESC LIMIT 1")
+
+try:
+
+if mycursor == None:
+
 sql = "INSERT INTO attendance(serial , name ,mark) VALUES (%s, %s, %s)"
 val = ( "1","Highway 21","p")
 mycursor.execute(sql, val)
