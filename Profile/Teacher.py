@@ -41,7 +41,7 @@ def teach_input():
     :return: list of  keys(agruments) mapped to their respective value
     """
     for i in range(1, 4):
-        tmp = input("enter the  parameter " + teach_args(i))
+        tmp = input("enter the  teacher's " + teach_args(i))
         key = teach_args(i)
         li.update({key: tmp})
 

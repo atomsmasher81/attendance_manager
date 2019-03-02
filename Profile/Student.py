@@ -33,7 +33,7 @@ def stu_args(x):
 	    this function provides the arguments taken by student one by one
 	"""
     return {
-        1: "num",
+        1: "roll_number",
         2: "name",
         3: "section",
         4: "branch",
@@ -47,7 +47,7 @@ def stu_input():
 	:return: list of  keys(agruments) mapped to their respective value
 	"""
     for i in range(1, 6):
-        tmp = input("enter the  parameter " + stu_args(i))
+        tmp = input("enter the  student's " + stu_args(i))
         key = stu_args(i)
         li.update({key: tmp})
 

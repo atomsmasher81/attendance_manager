@@ -8,11 +8,12 @@ db = mysql.connect(
     host = 'localhost',
     user = 'root',
     port = '3306',
-    password = 'XXXXX',
+    password = 'kartik@1234',
 
 )
 
 mycursor = db.cursor()
+
 """
 #mycursor.execute("CREATE DATABASE myattendance")
 mycursor.execute("SHOW DATABASES")
@@ -29,7 +30,9 @@ def check_tables():
     """
     check the required tables and if they are not present creating them
     """
+    print("checking for required tables")
     mycursor.execute("USE attendance")
+    #mycursor.execute("alter table attendance modify column mark varchar(2) default 'A'")
     mycursor.execute("SHOW TABLES")
     temp = []
     for x in mycursor:
@@ -44,8 +47,8 @@ def check_tables():
     
         for x in temp:
             for y in x:
-                print("here")
-                print(x)
+
+
                 if y == 'attendance':
                     attendance_table = 1
                     print("attendance table exists")
@@ -58,11 +61,14 @@ def check_tables():
 
         if attendance_table == 0:
             mycursor.execute("CREATE TABLE attendance(serial varchar(2) , name varchar(20) FOREIGN KEY REFERENCES student(name),mark varchar(2) DEFAULT 'A')")
+            print("attendance table created")
         if student_table == 0:
             mycursor.execute("CREATE TABLE Student(roll_number varchar(10) PRIMARY KEY,name varchar(20) ,section varchar(5),branch varchar(5),batch varchar(4))")
+            print("student table created")
         if teacher_table == 0:
             mycursor.execute (
                 "CREATE TABLE Teacher(number varchar(5) PRIMARY KEY,name varchar(20),branch varchar(5))")
+            print("teacher table created")
 
         
 
@@ -74,10 +80,17 @@ def all_record(profile):
         print(x)
 
 def specific_record(proflie,name):
-    mycursor.execute('SELECT * FROM %s WHERE NAME=%s'%(tuple(proflie,name)))
-    result = mycursor.fetchall()
-    for x in result:
-        print(x)
+    #sql ='SELECT * FROM %s WHERE NAME=%s ' % (tuple(proflie,name)
+    try:
+        mycursor.execute("SELECT * FROM %s WHERE name='%s' " % (proflie,name))
+
+
+    except :
+        print("person not in records")
+    else:
+        result = mycursor.fetchall()
+        for x in result:
+            print(x)
 
 try:
     mycursor.execute("SELECT * FROM attendance ORDER BY SERIAL DESC LIMIT 1")
@@ -112,11 +125,15 @@ def insert_student(li):
 
 def mark(stu,mark):
 
-
-    sql = "UPDATE TABLE attendance SET MARK = '%s' WHERE NAME = %s" %(mark,stu)
+    sql = "INSERT "
+    #sql = "UPDATE TABLE attendance SET mark = '%s' WHERE NAME = '%s'" %tuple((mark,stu))
 
     mycursor.execute(sql)
 
+
+
+def bye():
+    db.commit()
 """
 mycursor.execute("SELECT * FROM attendance")
 
