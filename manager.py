@@ -50,13 +50,16 @@ def check_record():
         else:
             print("incorrect option")
             check_record()
-
+    call_main()
 
 
 def bye():
+    global main_menu_count
+    print("you visited main menu {} times".format(main_menu_count))
     print("thanks for using attendance manager \n"
           "Exiting...")
-
+    db.bye()
+    call_main()
 def call_main():
     global main_menu_count
     main_menu_count+=1
@@ -75,9 +78,9 @@ def main_menu():
     print(" Here is the stuff you can do -\n"
           " 1.add teacher or student record\n "
           "2.check teacher or student record\n"
-          "2. mark attendance\n"
-          "3.check attendance\n"
-          "4.exit"
+          "3. mark attendance\n"
+          "4.check attendance\n"
+          "5.exit"
           )
     var6 = int(input())
     if var6 == 1:
@@ -98,13 +101,24 @@ def main_menu():
 
 
 def all_mark():
+    """
+
+    to mark attendance of all student one by one
+    :return:
+    """
 
     stu_list =db.all_stu()
     for x in stu_list:
-        print("mark attendance for ", x)
-        mark =input()
-        db.mark(x,mark)
+        for y in x:
+
+            print("mark attendance for ", y)
+            mark =input().upper()
+            if mark != 'P' and  mark != 'A':
+                print("this attendance mark is not allowed")
+                all_mark()
+            db.mark(y,mark)
     call_main()
+
 
 def one_mark():
 
@@ -115,7 +129,7 @@ def one_mark():
     var4 = int(input("do you want to mark attendance by name or roll number \n 1.name \n 2.roll number"))
     if var4 ==1:
             var5 = input("enter the name of the full  student")
-            mark = input("enter : \n P--> Present \n A --> Absent")
+            mark = input("enter : \n P--> Present \n A --> Absent").upper()
             db.mark(var5,mark)
     print("attendance marked")
     call_main()
@@ -135,7 +149,7 @@ def enter_record():
 
         li = Teacher.teach_input()
         db.insert_teacher(li)
-        
+        print("record created")
 
         """
         creating the object for teacher
@@ -149,7 +163,7 @@ def enter_record():
     else:
         li = Student.stu_input()
         db.insert_student(li)
-        
+        print("record created")
         
 
 
