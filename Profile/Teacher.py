@@ -27,8 +27,8 @@ def teach_args(x):
     """"
     this function provides the arguments taken by teacher  one by one
     """
-	 return {
-		1 : "teach_num",
+    return {
+		1 : "number",
 		2 : "name",
 		3: "branch",
 		4 : "special_degsination"
