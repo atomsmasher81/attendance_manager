@@ -13,17 +13,24 @@ db = mysql.connect(
 )
 
 mycursor = db.cursor()
+attendance_serial = None
+databases= []
 
-"""
-#mycursor.execute("CREATE DATABASE myattendance")
 mycursor.execute("SHOW DATABASES")
+result = mycursor.fetchall()
+for x in result:
+    for y in x:
+        databases.append(y)
 
-for x in mycursor:
-    print(x)
 
-#mycursor.execute("USE ATTENDANCE")
+if  'attendance' in  databases:
+    print("database exists")
 
-"""
+else:
+    mycursor.execute('CREATE DATABASE attendance')
+    print("database created")
+mycursor.execute('USE ATTENDANCE')
+
 
 
 def check_tables():
@@ -58,13 +65,14 @@ def check_tables():
                 if y == 'teacher':
                     teacher_table = 1
                     print("teacher table exists")
-
-        if attendance_table == 0:
-            mycursor.execute("CREATE TABLE attendance(serial varchar(2) , name varchar(20) FOREIGN KEY REFERENCES student(name),mark varchar(2) DEFAULT 'A')")
-            print("attendance table created")
         if student_table == 0:
             mycursor.execute("CREATE TABLE Student(roll_number varchar(10) PRIMARY KEY,name varchar(20) ,section varchar(5),branch varchar(5),batch varchar(4))")
             print("student table created")
+        if attendance_table == 0:
+            mycursor.execute("CREATE TABLE attendance(serial varchar(2) , name varchar(20),roll_number varchar(5) ,mark varchar(2) DEFAULT 'A',FOREIGN KEY(roll_number) REFERENCES student(roll_number)) ")
+
+            print("attendance table created")
+
         if teacher_table == 0:
             mycursor.execute (
                 "CREATE TABLE Teacher(number varchar(5) PRIMARY KEY,name varchar(20),branch varchar(5))")
@@ -92,10 +100,7 @@ def specific_record(proflie,name):
         for x in result:
             print(x)
 
-try:
-    mycursor.execute("SELECT * FROM attendance ORDER BY SERIAL DESC LIMIT 1")
-except:
-    print("there is no  existing record ")
+
 
 
 
@@ -123,12 +128,86 @@ def insert_student(li):
     mycursor.execute(sql,tuple( li.values()))
 
 
-def mark(stu,mark):
+def mark(stu,mark,flag):
+    """
 
-    sql = "INSERT "
-    #sql = "UPDATE TABLE attendance SET mark = '%s' WHERE NAME = '%s'" %tuple((mark,stu))
+    :param stu:
+    :param mark:
+    :param flag: to check that input given is by name (VAL:1)or by roll num(VAL:2)
 
-    mycursor.execute(sql)
+    :return:
+    """
+    create_att_table()
+    global attendance_serial
+    record_exist =[]
+    mycursor.execute("SELECT roll_number FROM STUDENT")
+    result= mycursor.fetchall()
+    for x in result:
+        record_exist.append(x)
+
+    if record_exist != None:
+        if flag == 1:
+
+            mycursor.execute("UPDATE ATTENDANCE SET MARK = '%s'  WHERE NAME = '%s'"%(mark,stu) )
+        else:
+            mycursor.execute("UPDATE ATTENDANCE SET MARK = '%s'  WHERE roll_number = '%s'" % (mark, stu))
+
+
+    else:
+
+
+        li1= []
+
+
+        mycursor.execute("SELECT serial FROM attendance ORDER BY SERIAL DESC LIMIT 1")
+
+
+        result = mycursor.fetchall()
+        for x in result:
+            if x != None:
+                attendance_serial=x+1
+
+        if attendance_serial == None:
+            attendance_serial =1
+        """
+
+         sql =  "SELECT CASE WHEN EXISTS (SELECT serial FROM attendance ORDER BY SERIAL) THEN CAST (1 AS BIT) ELSE CAST (0 AS A BIT)"
+        mycursor.execute(sql)
+         """
+
+        li1.append(attendance_serial)
+        mycursor.execute("SELECT name,roll_number FROM student ")
+        for x in mycursor:
+            for y in x:
+                li1.append(y)
+
+
+        li1.append(mark)
+        sql = "INSERT   INTO  attendance(SERIAL,NAME,ROLL_NUMBER,MARK) VALUES (%s, '%s', %s,'%s')" %tuple(li1)
+        #sql = "UPDATE TABLE attendance SET mark = '%s' WHERE NAME = '%s'" %tuple((mark,stu))
+
+        mycursor.execute(sql)
+
+def create_att_table():
+    attendance_serial1 =1
+    var =1
+    count = 0
+    roll_nums = []
+    name =[]
+    mycursor.execute('SELECT roll_number,name FROM student ')
+    result= mycursor.fetchall()
+    for x in result:
+        for y in x:
+            if  count/2 == 0:
+                roll_nums.append(y)
+                count+=1
+            else:
+                name.append(y)
+                count+=1
+
+    total = len(result)
+    while var >= total:
+        mycursor.execute("INSERT   INTO  attendance(SERIAL,NAME,ROLL_NUMBER,MARK) VALUES (%s, '%s', %s)"%(x,name[x],roll_nums[x],))
 
 
 
