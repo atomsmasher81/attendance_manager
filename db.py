@@ -8,7 +8,7 @@ db = mysql.connect(
     host = 'localhost',
     user = 'root',
     port = '3306',
-    password = 'kartik@1234',
+    password = 'XXXXX',
 
 )
 
@@ -207,8 +207,8 @@ def create_att_table():
 
     total = len(result)
     while var >= total:
-        mycursor.execute("INSERT   INTO  attendance(SERIAL,NAME,ROLL_NUMBER,MARK) VALUES (%s, '%s', %s)"%(x,name[x],roll_nums[x],))
-
+        mycursor.execute("INSERT   INTO  attendance(SERIAL,NAME,ROLL_NUMBER,MARK) VALUES (%s, '%s', %s)"%(var,name[x],roll_nums[x],))
+        var+=1
 
 
 def bye():

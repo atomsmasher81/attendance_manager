@@ -59,7 +59,7 @@ def bye():
     print("thanks for using attendance manager \n"
           "Exiting...")
     db.bye()
-    call_main()
+
 def call_main():
     global main_menu_count
     main_menu_count+=1
