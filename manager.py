@@ -130,9 +130,18 @@ def one_mark():
     if var4 ==1:
             var5 = input("enter the name of the full  student")
             mark = input("enter : \n P--> Present \n A --> Absent").upper()
-            db.mark(var5,mark)
+            db.mark(var5,mark,var4)
+
+    elif var4 == 2:
+            var5 = input("enter the roll number of the student")
+            mark = input("enter : \n P--> Present \n A --> Absent").upper()
+            db.mark(var5,mark,var4)
+
+    else:
+        print("invalid input")
+        one_mark()
     print("attendance marked")
-    call_main()
+
 
 
 
