@@ -8,7 +8,7 @@ db = mysql.connect(
     host = 'localhost',
     user = 'root',
     port = '3306',
-    password = 'XXXXX',
+    password = 'XXXX',
 
 )
 
@@ -167,7 +167,7 @@ def mark(stu,mark,flag):
             if x != None:
                 attendance_serial=x+1
 
-        if attendance_serial == None:
+        if attendance_serial is None:
             attendance_serial =1
         """
 
