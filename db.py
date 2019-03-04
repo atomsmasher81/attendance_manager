@@ -51,7 +51,7 @@ def check_tables():
         attendance_table = 0
         student_table = 0
         teacher_table = 0
-    
+        att_date_record = 0
         for x in temp:
             for y in x:
 
@@ -65,20 +65,27 @@ def check_tables():
                 if y == 'teacher':
                     teacher_table = 1
                     print("teacher table exists")
+                if y == 'att_table_record' :
+                    att_date_record = 1
+                    print("attendance date record exits")
+
         if student_table == 0:
             mycursor.execute("CREATE TABLE Student(roll_number varchar(10) PRIMARY KEY,name varchar(20) ,section varchar(5),branch varchar(5),batch varchar(4))")
             print("student table created")
         if attendance_table == 0:
-            mycursor.execute("CREATE TABLE attendance(serial varchar(2) , name varchar(20),roll_number varchar(5) ,mark varchar(2) DEFAULT 'A',FOREIGN KEY(roll_number) REFERENCES student(roll_number)) ")
+            mycursor.execute("CREATE TABLE attendance(serial varchar(5) , name varchar(20),roll_number varchar(5) ,mark varchar(2) DEFAULT 'A',FOREIGN KEY(roll_number) REFERENCES student(roll_number)) ")
 
             print("attendance table created")
 
         if teacher_table == 0:
             mycursor.execute (
-                "CREATE TABLE Teacher(number varchar(5) PRIMARY KEY,name varchar(20),branch varchar(5))")
+                "CREATE TABLE Teacher(number INT AUTO_INCREMENT PRIMARY KEY,name varchar(20),branch varchar(5))")
             print("teacher table created")
-
-        
+        if att_date_record ==0:
+            mycursor.execute(
+                "CREATE TABLE att_table_record(serial INT AUTO_INCREMENT PRIMARY KEY,date_val varchar(12))"
+            )
+            print("att_table_record table created")
 
 
 def all_record(profile):
@@ -128,7 +135,96 @@ def insert_student(li):
     mycursor.execute(sql,tuple( li.values()))
 
 
-def mark(stu,mark,flag):
+
+
+"""
+    finally:
+        sql ="INSERT INTO att_table_record(date_val) VALUES({})".format(table_name)
+        mycursor.execute(sql)
+
+"""
+
+def give_dates():
+    dates= []
+    sql = "SELECT date_val FROM att_table_record"
+    mycursor.execute(sql)
+    for x in mycursor:
+        for y in x:
+            dates.append(y)
+    return dates
+
+
+
+def check_att(name,dates):
+    mark = []
+
+    for x in dates:
+
+        sql = "SELECT MARK FROM `{}`".format(x)
+        mycursor.execute(sql)
+        for y in mycursor:
+            for z in y:
+                mark.append(z)
+
+    present = mark.count('P')
+    absent = mark.count('A')
+    return present,absent
+"""           
+    for x in mark:
+        for y in x:
+            if y == 'p'
+            present +=1
+            absent = mark.count('A')
+     """
+
+
+
+
+
+def create_att_table(date):
+
+    var =0
+    count = 0
+    roll_nums = []
+    name =[]
+    mycursor.execute('SELECT roll_number,name FROM student ')
+    result= mycursor.fetchall()
+    for x in result:
+        for y in x:
+            if  count%2 == 0:
+                roll_nums.append(y)
+                count+=1
+            else:
+                name.append(y)
+                count+=1
+
+    total = len(result)
+
+
+    try:
+        mycursor.execute(
+            "CREATE TABLE `{}`(serial varchar(3), name varchar(20),roll_number varchar(5) UNIQUE,mark varchar(2) DEFAULT 'A',FOREIGN KEY(roll_number) REFERENCES student(roll_number)) ".format(date)
+        )
+
+    except mysql.errors.ProgrammingError:
+        print("table {} exist".format(date))
+
+    else:
+        sql = "INSERT INTO att_table_record(date_val) VALUES('{}')".format(date)
+        mycursor.execute(sql)
+        while var < total:
+            mycursor.execute("INSERT   INTO  `%s`(SERIAL,NAME,ROLL_NUMBER) VALUES (%s, '%s', %s)" % (
+            date, (var + 1), name[var], roll_nums[var],))
+            var += 1
+
+
+
+
+
+
+
+
+def mark(stu,mark,flag,date):
     """
 
     :param stu:
@@ -137,7 +233,7 @@ def mark(stu,mark,flag):
 
     :return:
     """
-    create_att_table()
+    create_att_table(date)
     global attendance_serial
     record_exist =[]
     mycursor.execute("SELECT roll_number FROM STUDENT")
@@ -148,9 +244,9 @@ def mark(stu,mark,flag):
     if record_exist != None:
         if flag == 1:
 
-            mycursor.execute("UPDATE ATTENDANCE SET MARK = '%s'  WHERE NAME = '%s'"%(mark,stu) )
+            mycursor.execute("UPDATE `%s` SET MARK = '%s'  WHERE NAME = '%s'"%(date,mark,stu) )
         else:
-            mycursor.execute("UPDATE ATTENDANCE SET MARK = '%s'  WHERE roll_number = '%s'" % (mark, stu))
+            mycursor.execute("UPDATE `%s` SET MARK = '%s'  WHERE roll_number = '%s'" % (date,mark, stu))
 
 
     else:
@@ -188,27 +284,7 @@ def mark(stu,mark,flag):
 
         mycursor.execute(sql)
 
-def create_att_table():
-    attendance_serial1 =1
-    var =1
-    count = 0
-    roll_nums = []
-    name =[]
-    mycursor.execute('SELECT roll_number,name FROM student ')
-    result= mycursor.fetchall()
-    for x in result:
-        for y in x:
-            if  count/2 == 0:
-                roll_nums.append(y)
-                count+=1
-            else:
-                name.append(y)
-                count+=1
 
-    total = len(result)
-    while var >= total:
-        mycursor.execute("INSERT   INTO  attendance(SERIAL,NAME,ROLL_NUMBER,MARK) VALUES (%s, '%s', %s)"%(var,name[x],roll_nums[x],))
-        var+=1
 
 
 def bye():
