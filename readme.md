@@ -33,10 +33,3 @@ db = mysql.connect(
 ```
 Everything else will be taken care of by this program itself
 
-#note-
-
-the option
-
- `4`.check attendance
- 
- is still under contruction :)
