@@ -1,6 +1,3 @@
-
-
-
 class Teacher(object):
 
     def __init__(self, teach_num, name, branch, special_designation=None):
@@ -8,7 +5,6 @@ class Teacher(object):
         self.name = name
         self.branch = branch
         self.special_designation = special_designation
-
 
     def get_info(self):
         """
@@ -22,20 +18,20 @@ class Teacher(object):
 
 li = {}
 
-def teach_args(x):
 
+def teach_args(x):
     """"
     this function provides the arguments taken by teacher  one by one
     """
     return {
-		1 : "number",
-		2 : "name",
-		3: "branch",
-		4 : "special_degsination"
-	    }[x]
+        1: "number",
+        2: "name",
+        3: "branch",
+        4: "special_degsination"
+    }[x]
+
 
 def teach_input():
-
     """
     this  function  is used to input data of teacher
     :return: list of  keys(agruments) mapped to their respective value
@@ -46,5 +42,3 @@ def teach_input():
         li.update({key: tmp})
 
     return li
-
-

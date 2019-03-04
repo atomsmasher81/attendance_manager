@@ -1,6 +1,7 @@
 import Profile.Student as Student
 import Profile.Teacher as Teacher
 import db
+import datetime as dt
 
 """
 list of all the functions in this program and their short briefing
@@ -14,7 +15,20 @@ list of all the functions in this program and their short briefing
 7.call_main        : to call main menu
 8.bye                : exiting the attendance manager
 9.check_record : checking the record
+10.check_att        :to check attendance (working on it)
 """
+
+date =  None
+
+
+def check_att():
+    name = input("enter the name of student")
+
+    dates = db.give_dates()
+    present,absent = db.check_att(name,dates)
+    att= att_cal(present,absent)
+    print("attendance is {}".format(att))
+    call_main()
 
 def check_record():
     var7=int( input("do you want to check teacher or student record\n"
@@ -58,7 +72,7 @@ def bye():
     print("you visited main menu {} times".format(main_menu_count))
     print("thanks for using attendance manager \n"
           "Exiting...")
-    db.bye() 
+    db.bye()
 
 def call_main():
     global main_menu_count
@@ -92,7 +106,7 @@ def main_menu():
         mark_att()
 
     elif var6 == 4:
-        pass
+        check_att()
     elif var6 == 5:
         bye()
 
@@ -100,13 +114,13 @@ def main_menu():
 
 
 
-def all_mark():
+def all_mark(date):
     """
 
     to mark attendance of all student one by one
     :return:
     """
-
+    flag =1  #this define that attendance is by name
     stu_list =db.all_stu()
     for x in stu_list:
         for y in x:
@@ -115,12 +129,12 @@ def all_mark():
             mark =input().upper()
             if mark != 'P' and  mark != 'A':
                 print("this attendance mark is not allowed")
-                all_mark()
-            db.mark(y,mark)
+                all_mark(date)
+            db.mark(y,mark,flag,date)
     call_main()
 
 
-def one_mark():
+def one_mark(date):
 
     """
     to mark the attendance of  a student
@@ -192,19 +206,33 @@ def mark_att():
     """
 
 
-
+    global date
     print("ok, let's get started with this")
+    x =  str(dt.datetime.now().date())
+
+    print("enter the date of attendance\n"
+               "or use current date{}".format(x))
+    input_date=int(input("1.custom date \n"
+               "2.current date"))
+
+    if input_date == 1:
+        date = input("enter date\n"
+                     "yyyy-mm-dd")
+    elif input_date == 2:
+        date = x
+
+
 
 
     var3 = int(input("for all student or particular one \n 1. all student \n 2. particular one"))
 
     if var3 == 1:
-        all_mark()
+        all_mark(date)
 
     elif var3== 2:
         var7 = 'y'
         while var7 == 'y':
-            one_mark()
+            one_mark(date)
             print("do you want to mark attendance for another student : "
                   "Enter 'y' if yes else press any other key ")
             var7 = input().lower()
@@ -219,8 +247,8 @@ def mark_att():
 
 
 
-def att_cal(attended,total):
-    z = ((attended / total)*100).__round__(2)
+def att_cal(attended,absent):
+    z = ((attended / (attended + absent))*100).__round__(2)
 
     return z
 
@@ -234,19 +262,4 @@ if __name__ == '__main__':
 
     main_menu()
 
-"""
-#example for attendance %
-#attended_days = 50
-#total_days = 176
-attendance_percentage= att_cal(attended_days,total_days)
-print(attendance_percentage)
 
-
-
-
-
-
-student = "q"
-mark = "p"
-
-#db.mark(student,mark)"""
