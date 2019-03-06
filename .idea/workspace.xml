@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2854cc47-018c-4a6e-b666-8a9be52e9c30" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profile/Teacher.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/Teacher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
     </list>
@@ -41,7 +39,7 @@
           <entry key="Python Console" value="21" />
           <entry key="dummy" value="2" />
           <entry key="md" value="384" />
-          <entry key="py" value="13160" />
+          <entry key="py" value="14671" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
@@ -49,64 +47,57 @@
         <counts>
           <entry key="Markdown" value="384" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="13181" />
+          <entry key="Python" value="14692" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="46" />
+          <entry key="py" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="46" />
+          <entry key="Python" value="47" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="258" column="21" lean-forward="true" selection-start-line="258" selection-start-column="21" selection-end-line="258" selection-end-column="21" />
+            <state relative-caret-position="59">
+              <caret line="79" column="20" lean-forward="true" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
                 <element signature="e#894#1948#0" />
-                <marker date="1551719646278" expanded="true" signature="656:853" ph="..." />
-                <marker date="1551719646278" expanded="true" signature="889:1951" ph="..." />
-                <marker date="1551719646278" expanded="true" signature="2056:2061" ph="..." />
+                <marker date="1551896048359" expanded="true" signature="754:1386" ph="..." />
+                <marker date="1551896048359" expanded="true" signature="1431:2659" ph="..." />
+                <marker date="1551896048359" expanded="true" signature="2695:3757" ph="..." />
+                <marker date="1551896048359" expanded="true" signature="3862:3867" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1323">
-              <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/mysql/connector/cursor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="877" selection-start-line="877" selection-end-line="877" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="211">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+              <folding>
+                <element signature="e#590#2640#0" />
+                <element signature="e#2672#2789#0" />
+                <element signature="e#2830#3127#0" />
+                <element signature="e#3319#3630#0" />
+                <element signature="e#3661#3864#0" />
+                <element signature="e#4519#4668#0" />
+                <element signature="e#5214#6275#0" />
+                <element signature="e#6318#7903#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,6 +132,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>attendance</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -393,27 +389,6 @@
     <MESSAGE value="bug fix" />
     <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/temp.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/temp.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/manager.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Student.py" />
     <entry file="file://$PROJECT_DIR$/Teacher.py" />
@@ -497,27 +472,38 @@
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/mysql/connector/cursor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
-          <caret line="877" selection-start-line="877" selection-end-line="877" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1323">
-          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+          <caret line="340" selection-start-line="340" selection-end-line="340" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="258" column="21" lean-forward="true" selection-start-line="258" selection-start-column="21" selection-end-line="258" selection-end-column="21" />
+        <state relative-caret-position="59">
+          <caret line="79" column="20" lean-forward="true" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
             <element signature="e#894#1948#0" />
-            <marker date="1551719646278" expanded="true" signature="656:853" ph="..." />
-            <marker date="1551719646278" expanded="true" signature="889:1951" ph="..." />
-            <marker date="1551719646278" expanded="true" signature="2056:2061" ph="..." />
+            <marker date="1551896048359" expanded="true" signature="754:1386" ph="..." />
+            <marker date="1551896048359" expanded="true" signature="1431:2659" ph="..." />
+            <marker date="1551896048359" expanded="true" signature="2695:3757" ph="..." />
+            <marker date="1551896048359" expanded="true" signature="3862:3867" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#590#2640#0" />
+            <element signature="e#2672#2789#0" />
+            <element signature="e#2830#3127#0" />
+            <element signature="e#3319#3630#0" />
+            <element signature="e#3661#3864#0" />
+            <element signature="e#4519#4668#0" />
+            <element signature="e#5214#6275#0" />
+            <element signature="e#6318#7903#0" />
           </folding>
         </state>
       </provider>

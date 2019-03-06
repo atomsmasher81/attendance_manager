@@ -2,6 +2,8 @@ import Profile.Student as Student
 import Profile.Teacher as Teacher
 import db
 import datetime as dt
+import matplotlib.pyplot as plt
+import numpy as np
 
 """
 list of all the functions in this program and their short briefing
@@ -15,19 +17,88 @@ list of all the functions in this program and their short briefing
 7.call_main        : to call main menu
 8.bye                : exiting the attendance manager
 9.check_record : checking the record
-10.check_att        :to check attendance (working on it)
+10.check_att        :to check attendance 
+11. plot              : to plot the graph
 """
 
 date =  None
 
+def plot(dates,start_date,var9,flag):
+    # for plotting graph
+    dict = {}
+    counter = 0
+    temp_date = []
+    for x in dates:
+
+        if x == start_date:
+            counter += 1
+
+        if counter == 1:
+            temp_date.append(x)
+            pr, ab, mrk, unused_start_date = db.check_att(var9, temp_date, flag)
+            att = att_cal(pr, ab)
+            dict[x] = att
+
+        else:
+
+            dict[x] = 0
+    # rng = np.arange(0,100,10)
+
+
+    plt.plot(dict.keys(), dict.values(), color='black', markevery=1, markerfacecolor='blue', marker='o')
+
+    plt.xlabel("dates")
+    plt.ylabel("percentage")
+    plt.title("attendance graph")
+    plt.show()
+
 
 def check_att():
-    name = input("enter the name of student")
+
+    var9 = None
+    all = 0
+    flag =int( input("enter name or roll number of  student you want to check attendance for\n"
+          "1. name \n"
+          "2. roll number\n"
+          "3. attendance list of all student"))
+    if flag == 1:
+         var9 = input("enter the name of student")
+    elif flag == 2:
+        var9 = input("enter the roll number of student")
+    elif flag == 3:
+        all = 1
+    else:
+        print("invalid input")
+        check_att()
 
     dates = db.give_dates()
-    present,absent = db.check_att(name,dates)
-    att= att_cal(present,absent)
-    print("attendance is {}".format(att))
+    if all ==1:
+
+
+        li_val = []
+        li =  db.all_stu()
+        for x in li:
+            present, absent, mark, start_date = db.check_att(x, dates, all)
+
+            att = att_cal(present, absent)
+
+            li_val.append(att)
+
+
+        print("Name             Percentage")
+        for x in range(0,len(li)):
+            print("{}             {}".format(li[x],li_val[x]))
+    else:
+        present, absent, mark, start_date = db.check_att(var9, dates, flag)
+
+        att = att_cal(present, absent)
+        print("attendance is {}".format(att))
+        var6 = input("do u want to see the graph of the latter\n"
+                    "y : yes \n"
+                    "").upper()
+        if var6 == 'Y':
+            plot(dates, start_date, var9, flag)
+
     call_main()
 
 def check_record():
@@ -123,14 +194,14 @@ def all_mark(date):
     flag =1  #this define that attendance is by name
     stu_list =db.all_stu()
     for x in stu_list:
-        for y in x:
 
-            print("mark attendance for ", y)
-            mark =input().upper()
-            if mark != 'P' and  mark != 'A':
-                print("this attendance mark is not allowed")
-                all_mark(date)
-            db.mark(y,mark,flag,date)
+
+        print("mark attendance for ", y)
+        mark =input().upper()
+        if mark != 'P' and  mark != 'A':
+            print("this attendance mark is not allowed")
+            all_mark(date)
+        db.mark(y,mark,flag,date)
     call_main()
 
 
