@@ -8,7 +8,7 @@ db = mysql.connect(
     host = 'localhost',
     user = 'root',
     port = '3306',
-    password = 'XXXX',
+    password = 'kartik@1234',
 
 )
 
@@ -115,7 +115,9 @@ def  all_stu():
     mycursor.execute("SELECT name FROM Student")
     stu_list= []
     for x in mycursor:
-        stu_list.append(x)
+        for y in x:
+
+            stu_list.append(y)
     return stu_list
 
 def insert_teacher(li):
@@ -155,20 +157,34 @@ def give_dates():
 
 
 
-def check_att(name,dates):
+def check_att(var,dates,flag):
     mark = []
+    start_date = None
+    var0 = 0
+    if flag == 1:
+        for x in dates:
 
-    for x in dates:
+            sql = "SELECT MARK FROM `{}` WHERE NAME = '{}'".format(x, var)
+            mycursor.execute(sql)
+            for y in mycursor:
+                if var0 == 0:
+                    start_date = x
+                    var0+=1
+                for z in y:
+                    mark.append(z)
+    else:
+        for x in dates:
 
-        sql = "SELECT MARK FROM `{}`".format(x)
-        mycursor.execute(sql)
-        for y in mycursor:
-            for z in y:
-                mark.append(z)
+            sql = "SELECT MARK FROM `{}` WHERE ROLL_NUMBER = '{}'".format(x, var)
+            mycursor.execute(sql)
+            for y in mycursor:
+                for z in y:
+                    mark.append(z)
+
 
     present = mark.count('P')
     absent = mark.count('A')
-    return present,absent
+    return present,absent,mark,start_date
 """           
     for x in mark:
         for y in x:
