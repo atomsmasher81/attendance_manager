@@ -1,8 +1,8 @@
-#Attendance Manager
+# Attendance Manager
 
 this program can help you to mange your class attendance easily
 
-##main menu
+## main menu
 hey , Welcome to your attendance manager. 
 
  Here is the stuff you can do -
@@ -17,7 +17,7 @@ hey , Welcome to your attendance manager.
 
  `5`.exit
  
- ##setup
+ ## Setup
  You just need to setup python 3.7 and mysql db
  
  and fill connection details in db.py
@@ -32,4 +32,3 @@ db = mysql.connect(
 )
 ```
 Everything else will be taken care of by this program itself
-
