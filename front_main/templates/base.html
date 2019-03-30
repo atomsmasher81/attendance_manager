@@ -1,0 +1,49 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>attendance manager</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- header -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	  <link rel="stylesheet" href="{% static 'css/nav_css.css' %}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- footer -->
+
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/foot_css.css' %}">
+<!-- // -->
+      <style type="text/css">
+      	body {
+      		background: url(https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?cs=srgb&dl=abstract-art-background-1037992.jpg&fm=jpg),no-repeat ;
+          background-size: 100%;
+      	}
+      </style>
+   
+</head>
+<body>
+	<!-- nav bar -->
+	{% include '_partials/navbar.html' %}
+
+	{% block content  %}
+
+
+    {% endblock %}
+
+  {% include '_partials/footer.html' %}  
+
+  <!-- header -->
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- footer -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</body>
+</html>
