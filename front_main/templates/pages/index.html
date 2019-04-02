@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
+{% load static % }
+
+
+
 
 {% block content %}
-<h1>main</h1>
+<div class = "index_div">
+	<h1 class="inhead"> Welcome To your Attendance manager</h1>
+
+	
+	<div class = "flex">
+		<h3 id="index_content"> This is a simple and intutive tool  which can be used for marking or modifing  attendance </h3>
+		<br>
+		<form method="get" action="{% url 'services' %}">
+		<button class="button button2 index_but" >let's Go!</button>
+	</form>
+	</div>
+</div>
 
 {% endblock %}

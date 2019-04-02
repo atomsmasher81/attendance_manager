@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static % }
+
+
+{% block content %}
+<div class="services">
+	
+    <h1 id = "heading">With this manager you can do a ton of stuff</h1>
+</div>
+
+
+<div class="services1">
+	<div class="services_inside">
+		<img src="https://image.flaticon.com/icons/png/512/27/27759.png" height="42" width="42">
+    <a class="service_link" href="{% url 'record_entry_teach' %}">Add Teacher record</a>
+     <a class="service_link" href="">Check Teacher record</a>
+
+ 	</div>
+ 
+
+ 	<div class="services_inside">
+ 		<img src="https://image.flaticon.com/icons/png/512/43/43455.png" height="42" width="42">
+    <a class="service_link" href="{% url 'record_entry' %}">Add Student record</a>
+   
+    <a class="service_link" href="">Check Student Record </a>
+
+ 	</div>  
+
+ 	<div class="services_inside">
+ 		<img src="https://image.flaticon.com/icons/png/512/15/15503.png" height="42" width="42">
+ 		 <a class="service_link" href="">Mark Attendance </a>
+    <a class="service_link" href="">Check Attendance</a>
+
+ 	</div>    
+</div> 
+
+ <div  class="services3" >
+   
+    <a class="service_link" href="">Exit</a>
+
+</div>   
+
+{% endblock %}
