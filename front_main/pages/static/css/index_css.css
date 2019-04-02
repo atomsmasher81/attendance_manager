@@ -1,0 +1,67 @@
+.button {
+ background-image: linear-gradient(to right, #fcbfbf 0%, #f9bdbd63 51%, #d0eeea 100%); /* Green */
+  border: none;
+  color: #2e2f30;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 19px; 
+  position: absolute;
+  bottom: 200px;
+  right: 17%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+   background-position: right center;
+   border-radius: 60px;
+
+}
+
+
+h1.inhead {
+  font-family: 'ZCOOL XiaoWei', serif;
+  position: relative;
+  padding-top: 70px;
+  font-size: 50px;
+  
+}
+@keyframes example {
+  0%   {color: #3c92c3;}
+  25%  {color: #a9477e;}
+  50%  {color: #cb5e53;}
+  100% {color: green;}
+}
+
+
+#index_content{
+      padding-top: 6%;
+    font-family: 'Cinzel', serif;
+      animation-name: example;
+  animation-duration: 6s;
+  animation-delay: 2s;
+
+
+}
+
+.index_div{
+  margin-top: auto;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  align-content: space-between;
+
+}

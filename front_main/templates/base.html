@@ -7,9 +7,17 @@
 	<title>attendance manager</title>
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+      {% block script %}
+
+
+      {% endblock %}
+
+
       <!-- header -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	  <link rel="stylesheet" href="{% static 'css/nav_css.css' %}">
+	  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      <!-- footer -->
 
@@ -17,16 +25,47 @@
      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="{% static 'css/foot_css.css' %}">
+      <!-- content -->
+            <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+           <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href= "{% static 'css/index_css.css' %}">
+
+
+      <!-- services -->
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+           <link rel="stylesheet" type="text/css" href="{% static 'css/services.css' %}">
+          <!-- entry form -->
+          
+          <link rel="stylesheet" type="text/css" href="{% static 'css/record_entry.css' %}">
 <!-- // -->
       <style type="text/css">
       	body {
-      		background: url(https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?cs=srgb&dl=abstract-art-background-1037992.jpg&fm=jpg),no-repeat ;
-          background-size: 100%;
+      		background: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?cs=srgb&dl=abstract-art-background-1037995.jpg&fm=jpg);
+          background-repeat:  no-repeat ;
+          background-size: cover;
+          overflow: auto;
       	}
+        .con2 {
+            /*position: fixed;*/
+            left: 0;
+           
+             right: 0; 
+            bottom: 0;
+            width: 100%;
+          /*  background-color: red;
+            color: white;
+            text-align: center;
+    */
+    }
+
+}  
+}  
+
       </style>
    
 </head>
-<body>
+<body >
 	<!-- nav bar -->
 	{% include '_partials/navbar.html' %}
 
@@ -45,5 +84,10 @@
   <!-- footer -->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- entry form -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{%static 'js/record_entry.js' %}"></script>
 </body>
 </html>
