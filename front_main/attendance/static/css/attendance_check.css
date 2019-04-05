@@ -1,0 +1,15 @@
+.att_table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.att_table_th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.att_table_tr:nth-child(even) {
+  background-color: #dddddd;
+}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #myapps
     'student',
     'pages',
+    'teacher',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +67,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries':{
+            'get_at_index': 'attendance.templatetags.get_at_index',
+
+            }
         },
     },
 ]
@@ -84,6 +89,9 @@ DATABASES = {
         'USER' : 'root',
         'PORT' : '3306',
         'PASSWORD' : 'kartik@1234',
+        'DATABASE' : 'attendance'
+
+        
     }
 }
 

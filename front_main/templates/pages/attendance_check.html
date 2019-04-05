@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load get_at_index %}
+{% block content %}
+	<br>
+	<table class = "att_table">
+  	<tr class ="att_table_tr">
+    <th class="att_table_th">Roll Number</th>
+    <th class="att_table_th">Name</th>
+    <th class="att_table_th">Attendance</th>
+ 	 </tr>
+
+
+
+	 {% for p in range %}
+
+	
+
+	 {% with index=forloop.counter0 %}     
+
+   
+
+
+	 <tr  class ="att_table_tr">
+	
+    <td class="att_table_th">{{p}}</td>
+    <td class="att_table_th">{{name|get_at_index:forloop.counter0}}</td>
+    <td class="att_table_th">{{atte.att|get_at_index:forloop.counter0}}</td>
+  	</tr>
+  		{% endwith %}
+	{% endfor %}	
+	
+	
+ 
+
+ 
+ 
+</table>
+
+
+{% endblock %}

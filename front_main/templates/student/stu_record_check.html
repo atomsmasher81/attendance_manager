@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load get_at_index %}
+
+{% block content %}
+
+<br>
+<table class = "att_table">
+  	<tr class ="att_table_tr">
+    <th class="att_table_th">Roll Number</th>
+    <th class="att_table_th">Name</th>
+    <th class="att_table_th">section </th>
+    <th class="att_table_th">branch </th>
+    <th class="att_table_th">batch </th>
+ 	</tr>
+
+ 	{% for items in record %}
+		<tr  class ="att_table_tr">
+
+ 	{% for x in items %}
+
+
+
+	
+    <td class="att_table_th">{{x}}</td>
+    
+  	
+  	{% endfor %}
+  	</tr>
+  	{% endfor %}
+</table>
+
+{% endblock %}
