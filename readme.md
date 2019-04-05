@@ -1,8 +1,8 @@
-#Attendance Manager
+# Attendance Manager
 
 this program can help you to mange your class attendance easily
 
-##main menu
+## main menu
 hey , Welcome to your attendance manager. 
 
  Here is the stuff you can do -
@@ -17,7 +17,7 @@ hey , Welcome to your attendance manager.
 
  `5`.exit
  
- ##setup
+ ## Setup
  You just need to setup python 3.7 and mysql db
  
  and fill connection details in db.py and settings.py in front_main
@@ -35,12 +35,14 @@ add absolute path of this repo in to environment variable path
 
 Everything else will be taken care of by this program itself
 
+
 # run-
 
 start django server from front_main file
 
-#note-
+# note-
 
 all check records are working 
 
 add records are under construction ;)
+
