@@ -8,7 +8,10 @@ db = mysql.connect(
     host = 'localhost',
     user = 'root',
     port = '3306',
+auth_plugin='mysql_native_password',
     password = 'kartik@1234',
+    database = 'attendance',
+
 
 )
 
@@ -89,10 +92,18 @@ def check_tables():
 
 
 def all_record(profile):
+    record_list = []
     mycursor.execute('SELECT * FROM %s'%(profile))
     result = mycursor.fetchall()
+
+    # for x in result :
+    #     print(x)
+    #
+
     for x in result:
-        print(x)
+        record_list.append(x)
+
+    return  record_list
 
 def specific_record(proflie,name):
     #sql ='SELECT * FROM %s WHERE NAME=%s ' % (tuple(proflie,name)

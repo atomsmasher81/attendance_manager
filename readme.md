@@ -20,7 +20,7 @@ hey , Welcome to your attendance manager.
  ## Setup
  You just need to setup python 3.7 and mysql db
  
- and fill connection details in db.py
+ and fill connection details in db.py and settings.py in front_main
  
  ```
 db = mysql.connect(
@@ -31,4 +31,18 @@ db = mysql.connect(
 
 )
 ```
+add absolute path of this repo in to environment variable path
+
 Everything else will be taken care of by this program itself
+
+
+# run-
+
+start django server from front_main file
+
+# note-
+
+all check records are working 
+
+add records are under construction ;)
+

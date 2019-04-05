@@ -53,14 +53,15 @@ def plot(dates,start_date,var9,flag):
     plt.show()
 
 
-def check_att():
+def check_att(*args,**kwargs):
 
     var9 = None
     all = 0
-    flag =int( input("enter name or roll number of  student you want to check attendance for\n"
-          "1. name \n"
-          "2. roll number\n"
-          "3. attendance list of all student"))
+    flag =3
+    # flag =int( input("enter name or roll number of  student you want to check attendance for\n"
+    #       "1. name \n"
+    #       "2. roll number\n"
+    #       "3. attendance list of all student"))
     if flag == 1:
          var9 = input("enter the name of student")
     elif flag == 2:
@@ -84,10 +85,18 @@ def check_att():
 
             li_val.append(att)
 
+        dict_name = []
+        dict_att =[]
+        # print("Name             Percentage")
+        # for x in range(0,len(li)):
+        #     print("{}             {}".format(li[x],li_val[x]))
+        #
+        # for x in range(0, len(li)):
+        #     dict_name =
+        #     dict[li[x]] = li_val[x]
+        dict1= {'name' : li ,'att'  : li_val}
+        return dict1,li
 
-        print("Name             Percentage")
-        for x in range(0,len(li)):
-            print("{}             {}".format(li[x],li_val[x]))
     else:
         present, absent, mark, start_date = db.check_att(var9, dates, flag)
 
@@ -101,41 +110,51 @@ def check_att():
 
     call_main()
 
-def check_record():
-    var7=int( input("do you want to check teacher or student record\n"
-                "1. student\n"
-                "2.teacher\n"))
+def check_record(*args,**kwargs):
+    for keys,values in kwargs.items():
+
+        var7 = values
+    #var7  =1
+    record_list = []
+    # var7=int( input("do you want to check teacher or student record\n"
+    #             "1. student\n"
+    #             "2.teacher\n"))
+
+
     if var7 == 2:
         a = 'teacher'
-        var8 = int(input("you want to check:\n "
-                         "1.all record \n"
-                         "2.specific"))
-        if var8 ==1:
-            print("list of all teacher are")
+        # var8 = int(input("you want to check:\n "
+        #                  "1.all record \n"
+        #                  "2.specific"))
+        # if var8 ==1:
+        #     print("list of all teacher are")
 
-            db.all_record(a)
-        elif var8 ==2:
-            var9 = input("enter the name")
-            db.specific_record(a,var9)
-        else:
-            print("incorrect option")
-            check_record()
+        record_list = db.all_record(a)
+        # elif var8 ==2:
+        #     var9 = input("enter the name")
+        #     db.specific_record(a,var9)
+        # else:
+        #     print("incorrect option")
+        #     check_record()
     elif var7 == 1:
         a = 'student'
-        var8 = int(input("you want to check:\n "
-                         "1.all record \n"
-                         "2.specific"))
-        if var8 == 1:
-            print("list of all student are")
+        # var8 = int(input("you want to check:\n "
+        #                  "1.all record \n"
+        #                  "2.specific"))
+        # if var8 == 1:
+        #     print("list of all student are")
 
-            db.all_record(a)
-        elif var8 == 2:
-            var9 = input("enter the name")
-            db.specific_record(a, var9)
-        else:
-            print("incorrect option")
-            check_record()
-    call_main()
+        record_list =  db.all_record(a)
+
+        # elif var8 == 2:
+        #     var9 = input("enter the name")
+        #     db.specific_record(a, var9)
+        # else:
+        #     print("incorrect option")
+        #     check_record()
+
+    return record_list
+    #call_main()
 
 
 def bye():

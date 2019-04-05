@@ -38,6 +38,9 @@
           <!-- entry form -->
           
           <link rel="stylesheet" type="text/css" href="{% static 'css/record_entry.css' %}">
+
+        <!-- attendance_check -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/attendance_check_css' %}">
 <!-- // -->
       <style type="text/css">
       	body {
@@ -56,7 +59,23 @@
           /*  background-color: red;
             color: white;
             text-align: center;
-    */
+    */}
+
+.att_table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.att_table_th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.att_table_tr:nth-child(even) {
+  background-color: #dddddd;
+}
     }
 
 }  
@@ -69,10 +88,19 @@
 	<!-- nav bar -->
 	{% include '_partials/navbar.html' %}
 
+
+
+
+
+
 	{% block content  %}
 
 
-    {% endblock %}
+  {% endblock %}
+
+
+
+
 
   {% include '_partials/footer.html' %}  
 
