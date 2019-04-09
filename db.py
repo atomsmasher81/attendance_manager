@@ -175,19 +175,26 @@ def check_att(var,dates,flag):
     if flag == 1:
         for x in dates:
 
-            sql = "SELECT MARK FROM `{}` WHERE NAME = '{}'".format(x, var)
+            sql = "SELECT MARK FROM `%s` WHERE NAME = '%s' " % (x, var)
             mycursor.execute(sql)
-            for y in mycursor:
+            result = mycursor
+
+            for y in result:
+
+                for z in y:
+
+                    mark.append(z)
+
                 if var0 == 0:
                     start_date = x
                     var0+=1
-                for z in y:
-                    mark.append(z)
+
     else:
         for x in dates:
 
             sql = "SELECT MARK FROM `{}` WHERE ROLL_NUMBER = '{}'".format(x, var)
             mycursor.execute(sql)
+
             for y in mycursor:
                 for z in y:
                     mark.append(z)

@@ -84,16 +84,10 @@ def check_att(*args,**kwargs):
             att = att_cal(present, absent)
 
             li_val.append(att)
-
+        print(li_val)
         dict_name = []
         dict_att =[]
-        # print("Name             Percentage")
-        # for x in range(0,len(li)):
-        #     print("{}             {}".format(li[x],li_val[x]))
-        #
-        # for x in range(0, len(li)):
-        #     dict_name =
-        #     dict[li[x]] = li_val[x]
+
         dict1= {'name' : li ,'att'  : li_val}
         return dict1,li
 
@@ -212,7 +206,7 @@ def all_mark(date):
     """
     flag =1  #this define that attendance is by name
     stu_list =db.all_stu()
-    for x in stu_list:
+    for y in stu_list:
 
 
         print("mark attendance for ", y)
