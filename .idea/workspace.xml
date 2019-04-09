@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2854cc47-018c-4a6e-b666-8a9be52e9c30" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/static/css/record_entry.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/static/css/record_entry.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/student/static/css/record_entry.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/student/static/css/record_entry.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/teacher/static/css/record_entry.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/teacher/static/css/record_entry.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/templates/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/pages/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/templates/student/record_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/student/record_entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/templates/teacher/record_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/teacher/record_entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +41,7 @@
           <entry key="Python Console" value="21" />
           <entry key="dummy" value="2" />
           <entry key="html" value="76" />
-          <entry key="md" value="672" />
+          <entry key="md" value="676" />
           <entry key="py" value="15394" />
           <entry key="txt" value="7" />
         </counts>
@@ -59,7 +49,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="76" />
-          <entry key="Markdown" value="672" />
+          <entry key="Markdown" value="676" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="Python" value="15415" />
         </counts>
@@ -100,8 +90,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="190">
-                <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+              <first_editor relative-caret-position="342">
+                <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               </first_editor>
               <second_editor />
             </state>
@@ -586,8 +576,8 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="190">
-            <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+          <first_editor relative-caret-position="342">
+            <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           </first_editor>
           <second_editor />
         </state>
