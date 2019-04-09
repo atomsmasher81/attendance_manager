@@ -1,0 +1,15 @@
+.about1 {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	font-family: 'ZCOOL XiaoWei', serif;
+	font-size: 40px;
+}
+
+
+.about_content{
+
+	font-family: 'Cinzel', serif;
+	font-size: 27px;
+	padding: 30px 300px;
+}

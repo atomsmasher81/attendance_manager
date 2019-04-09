@@ -11,6 +11,15 @@ body{
 .formBox{
 	margin-top: 15px;
 	padding-bottom:  140px;
+
+}
+
+.entry_form{
+	/*display: flex;
+	flex-direction: column;
+	justify-content: center;
+	float: center;*/
+	margin-left: 35%;
 }
 .formBox  h1{
 	margin: 0;
@@ -19,6 +28,7 @@ body{
 	margin-bottom: 50px;
 	text-transform: uppercase;
 	font-size: 48px;
+	font-family: 'ZCOOL XiaoWei', serif;
 }
 .inputBox{
 	position: relative;
@@ -54,10 +64,27 @@ textarea{
 	height: 43px !important;
 }
 .button_entry{
-	width: 100%;
+	width: 30%;
+	border-radius: 19px;
     height: 50px;
     border: none;
     outline: none;
     background: #03A9F4;
     color: #fff;
+    margin-left: 35%;
+}
+
+
+
+.button_entry:hover{
+
+	width: 30%;
+	border-radius: 19px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #03A9;
+    color: #fff;
+    margin-left: 35%;
+
 }

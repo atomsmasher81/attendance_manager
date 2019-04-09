@@ -1,24 +1,14 @@
 #Attendance Manager
 
 this program can help you to mange your class attendance easily
+![home](home.PNG)
 
 ##main menu
 hey , Welcome to your attendance manager. 
 
- Here is the stuff you can do -
- 
- `1`.add teacher or student record
- 
- `2`.check teacher or student record
-
- `3`. mark attendance
-
- `4`.check attendance
-
- `5`.exit
- 
+![main menu](services.PNG)
  ##setup
- You just need to setup python 3.7 and mysql db
+ You just need to setup python 3.7 and mysql db and django
  
  and fill connection details in db.py and settings.py in front_main
  

@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2854cc47-018c-4a6e-b666-8a9be52e9c30" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/attendance/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/attendance/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/front_main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/front_main/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/front_main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/front_main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/student/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/student/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/student/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/student/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/teacher/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/teacher/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/teacher/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/teacher/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/static/css/record_entry.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/static/css/record_entry.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/student/static/css/record_entry.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/student/static/css/record_entry.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/teacher/static/css/record_entry.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/teacher/static/css/record_entry.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front_main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front_main/templates/pages/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/pages/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/templates/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/pages/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/templates/student/record_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/student/record_entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/templates/teacher/record_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/teacher/record_entry.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
@@ -27,7 +24,7 @@
     <session id="-618992611">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.23" value="1" />
@@ -41,11 +38,12 @@
           <entry key="project.open.time.441" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.86" value="2" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -53,31 +51,31 @@
           <entry key="Python Console" value="21" />
           <entry key="dummy" value="2" />
           <entry key="html" value="76" />
-          <entry key="md" value="622" />
-          <entry key="py" value="15287" />
+          <entry key="md" value="672" />
+          <entry key="py" value="15394" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="76" />
-          <entry key="Markdown" value="622" />
+          <entry key="Markdown" value="672" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="15308" />
+          <entry key="Python" value="15415" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="2" />
-          <entry key="md" value="2" />
-          <entry key="py" value="49" />
+          <entry key="md" value="3" />
+          <entry key="py" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="Markdown" value="2" />
-          <entry key="Python" value="49" />
+          <entry key="Markdown" value="3" />
+          <entry key="Python" value="57" />
         </counts>
       </usages-collector>
     </session>
@@ -87,14 +85,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1293">
-              <caret line="123" column="17" lean-forward="true" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+            <state relative-caret-position="190">
+              <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
-                <marker date="1554485510904" expanded="true" signature="754:1386" ph="..." />
-                <marker date="1554485510904" expanded="true" signature="1457:2925" ph="..." />
-                <marker date="1554485510904" expanded="true" signature="3072:4233" ph="..." />
-                <marker date="1554485510904" expanded="true" signature="4338:4343" ph="..." />
+                <marker date="1554548686155" expanded="true" signature="754:1386" ph="..." />
+                <marker date="1554548686155" expanded="true" signature="1457:2686" ph="..." />
               </folding>
             </state>
           </provider>
@@ -104,8 +100,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="266">
-                <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+              <first_editor relative-caret-position="190">
+                <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
               </first_editor>
               <second_editor />
             </state>
@@ -115,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front_main/attendance/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="285">
               <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -125,32 +121,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front_main/templates/_partials/navbar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="3534">
+              <caret line="186" selection-start-line="186" selection-end-line="186" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Profile/Teacher.py">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/mysql/connector/cursor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-              <folding>
-                <marker date="1551619977749" expanded="true" signature="243:248" ph="..." />
-                <marker date="1551619977749" expanded="true" signature="880:881" ph="..." />
-              </folding>
+            <state relative-caret-position="9975">
+              <caret line="532" selection-start-line="532" selection-end-line="532" />
             </state>
           </provider>
         </entry>
@@ -158,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Profile/Student.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="931">
-              <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+            <state relative-caret-position="1007">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
@@ -194,8 +177,9 @@
         <option value="$PROJECT_DIR$/front_main/templates/_partials/navbar.html" />
         <option value="$PROJECT_DIR$/front_main/templates/base.html" />
         <option value="$PROJECT_DIR$/front_main/attendance/views.py" />
-        <option value="$PROJECT_DIR$/db.py" />
         <option value="$PROJECT_DIR$/s.py" />
+        <option value="$PROJECT_DIR$/../backup/attendance_manager/db.py" />
+        <option value="$PROJECT_DIR$/db.py" />
         <option value="$PROJECT_DIR$/manager.py" />
         <option value="$PROJECT_DIR$/readme.md" />
       </list>
@@ -213,23 +197,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="attendance_manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="attendance_manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="attendance_manager" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="attendance_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="attendance_manager" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,28 +237,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.s">
-    <configuration name="code" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="attendance_manager" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.manager">
     <configuration name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="attendance_manager" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -288,6 +251,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="manager (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="attendance_manager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../backup/attendance_manager" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../backup/attendance_manager/manager.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -360,19 +344,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.code" />
       <item itemvalue="Python.db" />
       <item itemvalue="Python.temp" />
       <item itemvalue="Python.manager" />
       <item itemvalue="Python.s" />
+      <item itemvalue="Python.manager (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.s" />
         <item itemvalue="Python.manager" />
+        <item itemvalue="Python.manager (1)" />
+        <item itemvalue="Python.s" />
         <item itemvalue="Python.db" />
         <item itemvalue="Python.temp" />
-        <item itemvalue="Python.code" />
       </list>
     </recent_temporary>
   </component>
@@ -399,6 +383,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14474554" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -455,6 +440,17 @@
     <MESSAGE value="bug fix" />
     <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/manager.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Student.py" />
     <entry file="file://$PROJECT_DIR$/Teacher.py" />
@@ -472,27 +468,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/mysql/connector/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="452" selection-start-line="452" selection-end-line="452" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="320" selection-start-line="320" selection-end-line="320" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/urllib/parse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="777" selection-start-line="777" selection-end-line="777" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -501,28 +476,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/temp.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/mysql/connector/cursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="340" selection-start-line="340" selection-end-line="340" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Profile/Teacher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <marker date="1551619977749" expanded="true" signature="243:248" ph="..." />
-            <marker date="1551619977749" expanded="true" signature="880:881" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Profile/Student.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -540,16 +497,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.py">
+    <entry file="file://$PROJECT_DIR$/s.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="142">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/urllib/parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="777" selection-start-line="777" selection-end-line="777" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/mysql/connector/abstracts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="593" selection-start-line="593" selection-end-line="593" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/mysql/connector/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="496" selection-start-line="496" selection-end-line="496" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../backup/attendance_manager/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../backup/attendance_manager/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1554548686155" expanded="true" signature="754:1386" ph="..." />
+            <marker date="1554548686155" expanded="true" signature="1457:2686" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front_main/attendance/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="285">
           <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -557,35 +562,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manager.py">
+    <entry file="file://$PROJECT_DIR$/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1293">
-          <caret line="123" column="17" lean-forward="true" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-            <marker date="1554485510904" expanded="true" signature="754:1386" ph="..." />
-            <marker date="1554485510904" expanded="true" signature="1457:2925" ph="..." />
-            <marker date="1554485510904" expanded="true" signature="3072:4233" ph="..." />
-            <marker date="1554485510904" expanded="true" signature="4338:4343" ph="..." />
-          </folding>
+        <state relative-caret-position="3534">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/s.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/mysql/connector/cursor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <marker date="1554484321314" expanded="true" signature="19:24" ph="..." />
-          </folding>
+        <state relative-caret-position="9975">
+          <caret line="532" selection-start-line="532" selection-end-line="532" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Profile/Student.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="266">
-            <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <first_editor relative-caret-position="190">
+            <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
           </first_editor>
           <second_editor />
         </state>
