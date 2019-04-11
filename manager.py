@@ -242,8 +242,31 @@ def one_mark(date):
 
 
 
+def student_entry(roll_number, name,section, branch,batch):
+    dic = Student.student_entry(roll_number, name,section, branch,batch)
+
+    try:
+        db.insert_student(dic)
+    except:
+         bool = False
+    else:
+         bool = True
+
+    return bool
 
 
+def teach_entry(number,name,branch):
+        dic = Teacher.teach_entry(number,name,branch)
+
+        try:
+            db.insert_teacher(dic)
+        except:
+            bool = False
+        else:
+            bool = True
+
+
+        return  bool
 
 def enter_record():
 
@@ -332,7 +355,10 @@ def mark_att():
 
 
 def att_cal(attended,absent):
-    z = ((attended / (attended + absent))*100).__round__(2)
+    try:
+        z = ((attended / (attended + absent))*100).__round__(2)
+    except:
+        z=0
 
     return z
 
