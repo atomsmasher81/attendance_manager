@@ -4,7 +4,8 @@
 <div class="container-fluid">
 		<div class="container">
 			<div class="formBox">
-				<form>
+				<form  action="{% url 'student_entry' %}" method="POST">
+					{% csrf_token %}
 						<div class="row">
 							<div class="col-sm-12">
 								<h1>Enter Details</h1>
@@ -15,14 +16,16 @@
 							<div class="col-sm-6">
 								<div class="inputBox ">
 									<div class="inputText"> </div>
-									<input type="text" name="" class="input" placeholder="Roll Number">
+									<input type="text" name="roll_number" class="input" placeholder="Roll Number"
+									value= '{{ roll_number }}'>
 								</div>
 							</div>
 
 							<div class="col-sm-6">
 								<div class="inputBox">
 									<div class="inputText"> </div>
-									<input type="text" name="" class="input" placeholder="Name">
+									<input type="text" name="name" class="input" placeholder="Name"
+									value= '{{ name }}'>
 								</div>
 							</div>
 						</div>
@@ -31,14 +34,16 @@
 							<div class="col-sm-6">
 								<div class="inputBox">
 									<div class="inputText"></div>
-									<input type="text" name="" class="input" placeholder="Section">
+									<input type="text" name="section" class="input" placeholder="Section"
+									value= '{{ section }}'>
 								</div>
 							</div>
 
 							<div class="col-sm-6">
 								<div class="inputBox">
 									<div class="inputText"></div>
-									<input type="text" name="" class="input" placeholder="Branch">
+									<input type="text" name="branch" class="input" placeholder="Branch"
+									value= '{{ branch }}'>
 								</div>
 							</div>
 						</div>
@@ -47,7 +52,8 @@
 							<div class="col-sm-12">
 								<div class="inputBox">
 									<div class="inputText"></div>
-									<textarea class="input" placeholder="Batch"></textarea>
+									<textarea class="input" placeholder="Batch" name="batch" 
+									value= '{{ batch }}'></textarea>
 								</div>
 							</div>
 						</div>

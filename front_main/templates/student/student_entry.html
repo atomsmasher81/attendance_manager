@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<form method="get" action="{% url 'services' %}">
+		<button class="button button2 index_but" >back to services</button>
+	</form>
+<h1 style="font-family: 'Inconsolata', monospace;">record sucess :  {{bool}}</h1>
+
+{% if bool is True %}
+
+<table class = "att_table">
+	<tr class ="att_table_tr">
+		<th class="att_table_th">Field</th>
+		<th class="att_table_th">Response</th>
+	</tr>
+	<tr class ="att_table_tr">
+		<td class="att_table_th">roll number</td>
+		<td class="att_table_th">{{roll_number}}</td>
+	</tr>
+	<tr class ="att_table_tr">
+		<td class="att_table_th">Name</td>
+		<td class="att_table_th">{{name}}</td>
+	</tr>
+	<tr class ="att_table_tr">
+		<td class="att_table_th">section</td>
+		<td class="att_table_th">{{section}}</td>
+	</tr>
+	<tr class ="att_table_tr">
+		<td class="att_table_th">Branch</td>
+		<td class="att_table_th">{{branch}}</td>
+	</tr>
+	
+	<tr class ="att_table_tr">
+		<td class="att_table_th">Batch</td>
+		<td class="att_table_th">{{batch}}</td>
+	</tr>
+</table>
+
+
+
+{% endif %}
+
+
+
+
+
+
+
+{% endblock %}
