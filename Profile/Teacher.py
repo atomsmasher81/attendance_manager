@@ -33,7 +33,7 @@ def teach_args(x):
 
 def teach_input():
     """
-    this  function  is used to input data of teacher
+    this  function  is used to input data of teacher  in python
     :return: list of  keys(agruments) mapped to their respective value
     """
     for i in range(1, 4):
@@ -42,3 +42,22 @@ def teach_input():
         li.update({key: tmp})
 
     return li
+
+
+def teach_entry(number,name,branch):
+    """
+    to input data from front end
+    :return:
+    """
+    temp = (None,number,name,branch)
+    print('in db')
+    print(temp)
+    dict= {}
+    for i in range(1,4):
+        temp1 = temp[i]
+        key = teach_args(i)
+        dict.update({key:temp1})
+
+
+
+    return dict

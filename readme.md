@@ -34,9 +34,7 @@ Everything else will be taken care of by this program itself
 
 start django server from front_main file
 
-# note-
 
-all check records are working 
 
-add records are under construction ;)
+
 

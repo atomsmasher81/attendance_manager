@@ -52,3 +52,23 @@ def stu_input():
         li.update({key: tmp})
 
     return li
+
+
+
+def student_entry(roll_number, name,section, branch,batch):
+    """
+    to input data from front end
+    :return:
+    """
+    temp = (None,roll_number, name,section, branch,batch)
+    print('in db')
+    print(temp)
+    dict= {}
+    for i in range(1,6):
+        temp1 = temp[i]
+        key = stu_args(i)
+        dict.update({key:temp1})
+
+
+
+    return dict
