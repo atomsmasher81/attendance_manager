@@ -4,7 +4,8 @@
 <div class="container-fluid">
 		<div class="container">
 			<div class="formBox">
-				<form >
+				<form  action="{% url 'teacher_entry' %}" method="POST">
+					{% csrf_token %}
 						<div class="row">
 							<div class="col-sm-12">
 								<h1>Enter Details</h1>
@@ -15,14 +16,16 @@
 							<div class="col-sm-6">
 								<div class="inputBox ">
 									<div class="inputText"> </div>
-									<input type="text" name="" class="input" placeholder="Number">
+									<input type="text" name="Number" class="input" placeholder="Number" 
+									value= '{{ Number }}'>
 								</div>
 							</div>
 
 							<div class="col-sm-6">
 								<div class="inputBox">
 									<div class="inputText"> </div>
-									<input type="text" name="" class="input" placeholder="Name">
+									<input type="text" name="Name" class="input" placeholder="Name" 
+									value= '{{ Name }}'>
 								</div>
 							</div>
 						</div>
@@ -31,7 +34,8 @@
 							<div class="col-sm-6">
 								<div class="inputBox">
 									<div class="inputText"></div>
-									<input type="text" name="" class="input" placeholder="Branch">
+									<input type="text" name="Branch" class="input" placeholder="Branch"
+									value= '{{ Branch }}'>
 								</div>
 							</div>
 						</div>
