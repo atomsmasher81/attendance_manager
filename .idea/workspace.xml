@@ -3,10 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="2854cc47-018c-4a6e-b666-8a9be52e9c30" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profile/Student.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/Student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profile/Teacher.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/Teacher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/attendance/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/attendance/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/attendance/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/attendance/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/pages/static/css/foot_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/pages/static/css/foot_css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/pages/static/img/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/static/css/foot_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/static/css/foot_css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/student/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/student/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/teacher/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/teacher/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/templates/_partials/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/_partials/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/templates/pages/attendance_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/pages/attendance_entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/templates/pages/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/pages/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_main/templates/pages/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_main/templates/pages/services.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,13 +42,15 @@
           <entry key="project.open.time.441" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.86" value="2" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -47,7 +59,7 @@
           <entry key="dummy" value="2" />
           <entry key="html" value="76" />
           <entry key="md" value="676" />
-          <entry key="py" value="15865" />
+          <entry key="py" value="16123" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
@@ -56,7 +68,7 @@
           <entry key="HTML" value="76" />
           <entry key="Markdown" value="676" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="15886" />
+          <entry key="Python" value="16144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,13 +92,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="369" lean-forward="true" selection-start-line="369" selection-end-line="369" />
+            <state relative-caret-position="3040">
+              <caret line="160" column="16" lean-forward="true" selection-start-line="160" selection-start-column="16" selection-end-line="160" selection-end-column="16" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
-                <marker date="1554967972356" expanded="true" signature="754:1386" ph="..." />
-                <marker date="1554967972356" expanded="true" signature="1457:2686" ph="..." />
-                <marker date="1554967972356" expanded="true" signature="6384:6591" ph="..." />
+                <marker date="1555148126792" expanded="true" signature="754:1386" ph="..." />
+                <marker date="1555148126792" expanded="true" signature="1457:2686" ph="..." />
+                <marker date="1555148126792" expanded="true" signature="4993:5110" ph="..." />
+                <marker date="1555148126792" expanded="true" signature="6539:6746" ph="..." />
+                <marker date="1555148126792" expanded="true" signature="7448:7487" ph="..." />
               </folding>
             </state>
           </provider>
@@ -95,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Profile/Teacher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+            <state relative-caret-position="950">
+              <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
               <folding>
                 <marker date="1554922519063" expanded="true" signature="1090:1095" ph="..." />
               </folding>
@@ -107,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Profile/Student.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+            <state relative-caret-position="1254">
+              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -117,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="366">
+              <first_editor relative-caret-position="589">
                 <caret line="31" selection-start-line="31" selection-end-line="31" />
               </first_editor>
               <second_editor />
@@ -140,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2504">
-              <caret line="186" selection-start-line="186" selection-end-line="186" />
+            <state relative-caret-position="1204">
+              <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
             </state>
           </provider>
         </entry>
@@ -184,11 +198,11 @@
         <option value="$PROJECT_DIR$/front_main/attendance/views.py" />
         <option value="$PROJECT_DIR$/s.py" />
         <option value="$PROJECT_DIR$/../backup/attendance_manager/db.py" />
-        <option value="$PROJECT_DIR$/db.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/Profile/test.py" />
         <option value="$PROJECT_DIR$/Profile/Teacher.py" />
         <option value="$PROJECT_DIR$/Profile/Student.py" />
+        <option value="$PROJECT_DIR$/db.py" />
         <option value="$PROJECT_DIR$/manager.py" />
       </list>
     </option>
@@ -235,6 +249,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="all_mark&#9;null&#9;null" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -534,6 +549,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Profile/test.py" />
+    <entry file="file://$PROJECT_DIR$/Profile/Teacher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+          <folding>
+            <marker date="1554922519063" expanded="true" signature="1090:1095" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Profile/Student.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="589">
+            <caret line="31" selection-start-line="31" selection-end-line="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front_main/attendance/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -551,56 +594,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="366">
-            <caret line="31" selection-start-line="31" selection-end-line="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Profile/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Profile/Teacher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-          <folding>
-            <marker date="1554922519063" expanded="true" signature="1090:1095" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Profile/Student.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2504">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        <state relative-caret-position="1204">
+          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="369" lean-forward="true" selection-start-line="369" selection-end-line="369" />
+        <state relative-caret-position="3040">
+          <caret line="160" column="16" lean-forward="true" selection-start-line="160" selection-start-column="16" selection-end-line="160" selection-end-column="16" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
-            <marker date="1554967972356" expanded="true" signature="754:1386" ph="..." />
-            <marker date="1554967972356" expanded="true" signature="1457:2686" ph="..." />
-            <marker date="1554967972356" expanded="true" signature="6384:6591" ph="..." />
+            <marker date="1555148126792" expanded="true" signature="754:1386" ph="..." />
+            <marker date="1555148126792" expanded="true" signature="1457:2686" ph="..." />
+            <marker date="1555148126792" expanded="true" signature="4993:5110" ph="..." />
+            <marker date="1555148126792" expanded="true" signature="6539:6746" ph="..." />
+            <marker date="1555148126792" expanded="true" signature="7448:7487" ph="..." />
           </folding>
         </state>
       </provider>

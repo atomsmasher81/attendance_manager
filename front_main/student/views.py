@@ -47,7 +47,7 @@ def student_entry(request):
 
 	boole = manager.student_entry(roll_number,name,section,branch,batch)
 
-
+	manager.bye()
 	context = {
 	'roll_number': roll_number,
 	'name': name,

@@ -153,7 +153,7 @@ def check_record(*args,**kwargs):
 
 def bye():
     global main_menu_count
-    print("you visited main menu {} times".format(main_menu_count))
+    #print("you visited main menu {} times".format(main_menu_count))
     print("thanks for using attendance manager \n"
           "Exiting...")
     db.bye()
@@ -196,7 +196,10 @@ def main_menu():
 
 
 
-
+def all_mark_front(stu_list,mark,date):
+    flag = 1  # this define that attendance is by name
+    for y in stu_list:
+        db.mark(y, mark, flag, date)
 
 def all_mark(date):
     """
@@ -306,6 +309,15 @@ def enter_record():
         """
     call_main()
 
+def current_date():
+    return lambda : str(dt.datetime.now().date())
+
+
+
+
+def mark_att_front(names,date,mark):
+    all_mark_front(names,date,mark)
+
 
 def mark_att():
     """
@@ -315,7 +327,7 @@ def mark_att():
 
     global date
     print("ok, let's get started with this")
-    x =  str(dt.datetime.now().date())
+    x =  current_date()
 
     print("enter the date of attendance\n"
                "or use current date{}".format(x))
@@ -362,7 +374,8 @@ def att_cal(attended,absent):
 
     return z
 
-
+def check_tables():
+    db.check_tables()
 
 if __name__ == '__main__':
 

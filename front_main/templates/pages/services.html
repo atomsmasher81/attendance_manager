@@ -3,7 +3,9 @@
 
 
 {% block content %}
-<div class="services">
+
+    
+<div class="services" onload="myfuction({{boole}})">
 	
     <h1 id = "heading">With this manager you can do a ton of stuff</h1>
 </div>
@@ -34,10 +36,20 @@
  	</div>    
 </div> 
 
- <div  class="services3" >
-   
-    <a class="service_link" href="">Exit</a>
 
-</div>   
+
+
+{% if boole is True %}
+
+<script type="text/javascript">
+alert("record sucess")
+</script>
+   
+
+{% elif boole is False %}
+    <script type="text/javascript">
+alert("record sucess: false")
+</script>
+{% endif %}
 
 {% endblock %}

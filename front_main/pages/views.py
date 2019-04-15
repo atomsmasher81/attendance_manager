@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import manager
 # Create your views here.
 
 
@@ -15,5 +15,6 @@ def contact(request):
 	return render(request,'pages/contact.html')
 
 def services(request):
+	manager.check_tables()
 	return render(request,'pages/services.html')
 	
