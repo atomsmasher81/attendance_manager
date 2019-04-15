@@ -1,0 +1,47 @@
+.atte_head{
+		    text-align: center;
+    /* color: blueviolet; */
+    color: var(--white);
+    font-size: 20px;
+    font-family: initial;
+    text-shadow :5px 5px 10px black;
+     border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+
+
+.atte_data{
+
+		text-align: center;
+	font-size :medium;
+	color:#0f8294;
+	 border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.atte_data:first-child {
+    border-left: none;
+}
+
+.atte_data:last-child {
+    border-right: none;
+}
+
+.atte_table{
+	width: 100%;
+		border:none;
+    border-collapse: collapse;
+     border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+
+span {
+	text-shadow: 20px;
+}
+
+
+.mark2{
+	display: flex;
+	justify-content: center;
+}

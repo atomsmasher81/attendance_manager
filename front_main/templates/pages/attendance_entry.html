@@ -1,10 +1,66 @@
 {% extends 'base.html' %}
-
+{% load get_at_index %}
 {% load static %}
 
 {% block content %}
-		<h1>attendace entry
-	</h1>
+<a href="{% url 'services' %}">
+<div style="display: inline-flex;
+            align-items: center;
+            padding-left: 43px;
+">
+  
+  <img src="{% static 'img/back.png' %}">
+  <h2 style="font-family: 'Cinzel', serif;">Back</h2>
+ 
+</div>
+ </a>
 
+ <h2 class="in_logo" style="	float: right;
+ 	 padding-right: 43px;   
+ 	  color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;">Mark attendance</h2>
+
+
+<form method="POST" action="{% url 'attendance_sucess' %}">{% csrf_token %}
+	
+	<div class="date_filed" style="	display: flex;
+	justify-content: center;
+	    align-content: stretch;">
+		<span class="att_table_th">date</span>
+		<input  type="text" name="date",placeholder= "current_date"
+		value="{{date}}">
+	</div>
+ <table class="atte_table">
+ 	<tr>
+ 		<th class="atte_head"><h3>Roll No</h3></th>
+ 		<th class="atte_head"><h3>Name</h3></th>
+ 		<th class="atte_head"><h3>Mark</h3></th>
+	</tr>
+
+	 {% for p in range %}
+
+	 {% with index=forloop.counter0 %}    
+	<tr class="atte_table_row">
+		 	
+		<td class="atte_data">{{p}}</td>
+		<td class="atte_data">{{name|get_at_index:forloop.counter0}} </td>
+		<td class="atte_data">
+			<div class="mark2">
+			<select name="mark{{p}}">
+				<option value="P" style=" color:green; font-weight: bold;">P</option>
+				<option  value="A" style="color: red; font-weight: bold;">A</option>
+			</select>
+			</div>
+		</td>		
+	</tr>
+		{% endwith %}
+	{% endfor %}	
+	
+ </table>
+
+		<button class="button button2 index_but" >submit</button>
+	</form>
 
 {% endblock %}

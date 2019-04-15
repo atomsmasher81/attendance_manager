@@ -1,8 +1,32 @@
 
 
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-<h1>contact me</h1>
+<div style="display: flex;
+    padding-top: 17%;
+    padding-right: 10%;
+    padding-left: 10%;
+    /* padding: 20%; */
+    justify-content: space-around;
+">
+				
+<a href="https://github.com/atomsmasher81"><img src="{% static 'img/github.png' %}"></a>
+			
+<a href="https://www.linkedin.com/in/kartik-gautam-aab771149/"><img src="{% static 'img/linkedin.png' %}"></a>
+			
+
+<a href="https://stackoverflow.com/users/9978482/kartik-gautam"><img src="{% static 'img/stack-overflow.png' %}"></a>
+			
+<a href="mailto:kartikgatam1710@gmail.com"><img src="{% static 'img/gmail.png' %}"></a>
+
+
+			
+
+
+
+
+
+</div>
 
 {% endblock %}

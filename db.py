@@ -258,7 +258,7 @@ def create_att_table(date):
 
 
 
-def mark(stu,mark,flag,date):
+def mark(stu,marks,flag,date):
     """
 
     :param stu:
@@ -274,49 +274,49 @@ def mark(stu,mark,flag,date):
     result= mycursor.fetchall()
     for x in result:
         record_exist.append(x)
+    for mark in marks:
+        if record_exist != None:
+            if flag == 1:
 
-    if record_exist != None:
-        if flag == 1:
+                mycursor.execute("UPDATE `%s` SET MARK = '%s'  WHERE NAME = '%s'"%(date,mark,stu) )
+            else:
+                mycursor.execute("UPDATE `%s` SET MARK = '%s'  WHERE roll_number = '%s'" % (date,mark, stu))
 
-            mycursor.execute("UPDATE `%s` SET MARK = '%s'  WHERE NAME = '%s'"%(date,mark,stu) )
+
         else:
-            mycursor.execute("UPDATE `%s` SET MARK = '%s'  WHERE roll_number = '%s'" % (date,mark, stu))
 
 
-    else:
+            li1= []
 
 
-        li1= []
+            mycursor.execute("SELECT serial FROM attendance ORDER BY SERIAL DESC LIMIT 1")
 
 
-        mycursor.execute("SELECT serial FROM attendance ORDER BY SERIAL DESC LIMIT 1")
+            result = mycursor.fetchall()
+            for x in result:
+                if x != None:
+                    attendance_serial=x+1
+
+            if attendance_serial is None:
+                attendance_serial =1
+            """
+
+            sql =  "SELECT CASE WHEN EXISTS (SELECT serial FROM attendance ORDER BY SERIAL) THEN CAST (1 AS BIT) ELSE CAST (0 AS A BIT)"
+            mycursor.execute(sql)
+            """
+
+            li1.append(attendance_serial)
+            mycursor.execute("SELECT name,roll_number FROM student ")
+            for x in mycursor:
+                for y in x:
+                    li1.append(y)
 
 
-        result = mycursor.fetchall()
-        for x in result:
-            if x != None:
-                attendance_serial=x+1
+            li1.append(mark)
+            sql = "INSERT   INTO  attendance(SERIAL,NAME,ROLL_NUMBER,MARK) VALUES (%s, '%s', %s,'%s')" %tuple(li1)
+            #sql = "UPDATE TABLE attendance SET mark = '%s' WHERE NAME = '%s'" %tuple((mark,stu))
 
-        if attendance_serial is None:
-            attendance_serial =1
-        """
-
-         sql =  "SELECT CASE WHEN EXISTS (SELECT serial FROM attendance ORDER BY SERIAL) THEN CAST (1 AS BIT) ELSE CAST (0 AS A BIT)"
-        mycursor.execute(sql)
-         """
-
-        li1.append(attendance_serial)
-        mycursor.execute("SELECT name,roll_number FROM student ")
-        for x in mycursor:
-            for y in x:
-                li1.append(y)
-
-
-        li1.append(mark)
-        sql = "INSERT   INTO  attendance(SERIAL,NAME,ROLL_NUMBER,MARK) VALUES (%s, '%s', %s,'%s')" %tuple(li1)
-        #sql = "UPDATE TABLE attendance SET mark = '%s' WHERE NAME = '%s'" %tuple((mark,stu))
-
-        mycursor.execute(sql)
+            mycursor.execute(sql)
 
 
 

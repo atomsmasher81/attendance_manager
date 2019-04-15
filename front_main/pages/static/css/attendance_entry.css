@@ -1,0 +1,63 @@
+.atte_head{
+		    text-align: center;
+    /* color: blueviolet; */
+    color: var(--white);
+    font-size: 20px;
+    text-shadow:5px 5px 10px black;
+}
+
+.date_filed{
+	display: inline-flex;
+	justify-content: center;
+}
+
+.in_logo{
+	float: right;
+ 	 padding-right: 43px;   
+ 	  color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.atte_data{
+
+		text-align: center;
+	font-size :medium;
+	color:#292b33;
+	 border-bottom: 3px solid #8a8a8a;
+    border-top: 3px solid #8a8a8a;
+}
+
+.atte_data:nth-child(3){
+	color: green;
+}
+.atte_table_row:nth-child(2n+1) {
+    background-color: #635f5f42;
+    
+}
+.atte_table_row {
+	height:30px;
+}
+
+
+/*.atte_data:last-child {
+    border-right: none;
+}*/
+
+.atte_table{
+	width: 100%;
+	border:none;
+    border-collapse: collapse;
+}
+
+
+span {
+	text-shadow: 20px
+}
+
+
+.mark2{
+	display: flex;
+	justify-content: center;
+}

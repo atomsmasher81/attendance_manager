@@ -61,7 +61,7 @@ def teacher_entry(request):
 	
 	boole = manager.teach_entry(number,name,branch)
 
-
+	manager.bye()
 	context = {
 	'number': number,
 	'name': name,

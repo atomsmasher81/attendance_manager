@@ -32,3 +32,10 @@
  #social-em:hover {
      color: #f39c12;
  }
+
+
+
+ .foot_item{
+     display: flex;
+     justify-content: space-around;
+ }
